@@ -191,7 +191,10 @@ main {
         main .interactive .preview .view, main .print .preview .view {
           height: 300px; } }
     main .interactive .preview .imgview1, main .print .preview .imgview1 {
-      background-image: url(../images/perfectplaceview.png); }
+      background-image: url(../images/perfectplaceview.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
     main .interactive .preview .imgview2, main .print .preview .imgview2 {
       background-image: url(../images/GLRlogo.png);
       background-repeat: no-repeat;
