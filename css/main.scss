@@ -1,0 +1,536 @@
+@import 'partial';
+
+@font-face {
+    font-family: 'code-bold';
+    src: url('../font/codebold.eot');
+    src: url('../font/codebold.eot?#iefix') format('embedded-opentype'),
+         url('../font/codebold.woff2') format('woff2'),
+         url('../font/codebold.woff') format('woff'),
+         url('../font/codebold.ttf') format('truetype'),
+         url('../font/codebold.svg#code-bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// _____________ menu _____________
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $lightgrey;
+  border-right: 2px solid $mint;
+  width: 240px;
+  height: 100%;
+  z-index: 5;
+  @include transition-all;
+  @media screen and (max-width: $break-medium) {
+    left: -240px;
+  }
+  label.menu-toggle {
+  position: fixed;
+  left:240px;
+  width: 60px;
+  height: 60px;
+  line-height: 0px;
+  display: block;
+  padding: 0;
+  text-indent: -9999px;
+  z-index: 6;
+  background: $lightgrey url(https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png) 50% 50%/25px 25px no-repeat;
+  @include transition-all;
+    @media screen and (max-width: $break-medium) {
+      left: 0px;
+    }
+  }
+  ul, p{
+    list-style-type: none;
+    margin-top: 100px;
+      a, label {
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 2px;
+      display: block;
+      margin: 0 0 0 10px;
+      padding: 0 20px;
+      line-height: 30px;
+      text-decoration: none;
+      color: $black;
+      opacity: 0.7;
+      transition: 0.1s ease-out;
+      &:hover { color: $mint;
+                opacity: 1;
+              }
+    }
+  }
+}
+// _____________ header _____________
+header {
+  width: calc(100% - 240px);
+  height: 100vh;
+  float: right;
+  box-sizing: border-box;
+  @include transition-all;
+  @media screen and (max-width: $break-medium) {
+    width: 100%;
+  }
+  @media screen and (max-width: $break-small) {
+    min-height:400px;
+    background: #fff;
+  }
+  .title-mobile {
+    display: none;
+    @media screen and (max-width: $break-medium) {
+      display: block;
+      width: 300px;
+      margin: 0 auto;
+      h1 {
+        margin-top: 150px;
+        text-align: center;
+      }
+    }
+  }
+  .title {
+    position: relative;
+    width: 520px;
+    height: 225px;
+    left: 50%;
+    margin: 200px 0 0 -315px;
+    @media screen and (max-width: $break-medium) {
+      display: none;
+    }
+    .dennis, .timmers {
+      color: $black;
+      position: absolute;
+      float: left;
+      margin: 0 0 0 69px;
+      font-family: "code-bold", sans-serif;
+      .firstname, .lastname{
+        float: left;
+        font-size: 120px;
+        letter-spacing: 3px;
+        text-align: right;
+      }
+      .titleborder {
+        margin: -110px 0 0 -35px;
+        float: left;
+        background: $mint;
+        width: 2px;
+        height: 230px;
+        border-left: 15px solid #fff;
+        border-right: 15px solid #fff;
+      }
+      .skills  {
+        position: absolute;
+        margin: 25px 0 0 415px;
+        float: right;
+        font-size: 20px;
+        &:nth-child(3) {
+          margin: 24px 0 0 485px;
+        }
+        p {
+          margin: -3px 0;
+        }
+      }
+    .firstname {
+      margin: 0 0 0 15px;
+    }
+    }
+    .timmers {
+      margin: 120px 0 0 0;
+    }
+  }
+}
+
+// _____________ main _____________
+main {
+  width: calc(100% - 240px);
+  float: right;
+  background: $white;
+  box-sizing: border-box;
+  @include transition-all;
+  .print {
+    margin-top: 200px;
+  }
+  @media screen and (max-width: $break-medium) {
+    width: 100%;
+    margin-top: -250px;
+  }
+  .interactive, .print {
+    h1 {
+      text-transform: capitalize;
+      color: $grey;
+      letter-spacing: 3px;
+      text-align: right;
+      font-weight: 400;
+      font-size: 50px;
+      margin: -100px 88px 100px 0;
+      border-right: 2px solid $mint;
+      @media screen and (max-width: $break-medium) {
+        margin: 0 50px 0 0;
+      }
+      @media screen and (max-width: $break-medium) {
+        font-size:30px;
+      }
+    }
+    .preview{
+      margin: 0 auto 100px auto;
+      height: 400px;
+      width: 85%;
+      max-width: 1200px;
+      padding: 10px;
+      background: $lightgrey;
+      box-sizing: border-box;
+      border-radius: 2px;
+      cursor: pointer;
+      @media screen and (max-width: $break-medium) {
+        width: 99%;
+        margin-top: 50px;
+      }
+      @media screen and (max-width: $break-small) {
+        width: 99%;
+        height: auto;
+        margin: 0 auto 50px auto;
+      }
+      .view {
+        border-radius: 2px;
+        background: $white;
+        background-size: cover;
+        background-position: center;
+        width: calc(50% - 10px);
+        border-right: 2px solid $mint;
+        height: 100%;
+        float: left;
+        @media screen and (max-width: $break-small) {
+          width: 100%;
+          float: none;
+        }
+        @media screen and (max-width: $break-small) {
+          height: 300px;
+        }
+      }
+      .imgview1 { background-image: url(../images/perfectplaceview.png); }
+      .imgview2 { background-image: url(../images/GLRlogo.png);
+                  background-repeat: no-repeat; background-size: contain;}
+      .imgview3 { background-image: url(../images/vendettaview.png); }
+      .imgview4 { background-image: url(../images/blomsmaview.png);
+                  background-repeat: no-repeat; background-size: contain;}
+      .imgview5 { background-image: url(../images/vriendenview.png); }
+      .imgview6 { background-image: url(../images/floatingislandview.png)}
+      .info {
+        width: calc(50% - 10px);
+        float: right;
+        margin-right: 10px;
+        @media screen and (max-width: $break-small) {
+          width: 100%;
+          float: none;
+        }
+        h2 {
+          text-transform: capitalize;
+          color: $black;
+          font-size: 30px;
+          font-weight: 300;
+          letter-spacing: 2px;
+          text-align: center;
+        }
+        p {
+          padding: 10px;
+          font-size: 15px;
+          color: $black;
+          text-align: left;
+        }
+      }
+    }
+  }
+  .about {
+    height: 500px;
+    margin-top: 95px;
+    background: $white;
+    @media screen and (max-width: $break-small) {
+      margin-top: 0;
+      height: 100%;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 100px;
+      text-align: right;
+      margin: 100px 88px 50px 0;
+      color: $black;
+      @media screen and (max-width: $break-small) {
+        font-size: 40px;
+      }
+      @media screen and (max-width: $break-small) {
+        text-align: center;
+        float: none;
+        height: 100%;
+        margin: 50px 0 0 0;
+      }
+    }
+    p {
+      color: $black;
+      margin: 50px auto;
+      padding: 5px 50px 50px 50px;
+      max-width: 960px;
+    }
+  }
+}
+// _____________ footer _____________
+.mainfooter {
+  width: calc(100% - 240px);
+  background: $lightgrey;
+  float: right;
+  margin-top: 100px;
+  box-sizing: border-box;
+  @include transition-all;
+  @media screen and (max-width: $break-medium) {
+    width: 100%;
+    max-width: 960px;
+  }
+  @media screen and (max-width: $break-small) {
+    text-align: center;
+    float: none;
+    height: 100%;
+  }
+  h1{
+    color: $black;
+    font-weight: 700;
+    font-size: 100px;
+    margin: 50px 88px 50px 0;
+    text-align: right;
+    @media screen and (max-width: $break-small) {
+      font-size: 40px;
+      text-align: center;
+      margin: 20px 0 50px 0;
+    }
+  }
+  form {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    @media screen and (max-width: $break-small) {
+      width: 90%;
+    }
+    fieldset {
+      border: none;
+      legend {
+        color: $black;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-align: center;
+      }
+      input[type=text], input[type=email] {
+        margin-top: 30px;
+        float: left;
+        border-radius: 2px;
+        border: none;
+        border-bottom: 2px solid $grey;
+        background: none;
+        transition: 0.3s ease-out;
+        opacity: 0.7;
+        &:focus {
+          border-bottom: 2px solid $mint;
+          outline: 0;
+          opacity: 0.7;
+        }
+        @media screen and (max-width: $break-small) {
+          float: none;
+          width: 80%;
+          margin: 0 auto;
+        }
+      }
+      input[type=email] {
+        margin-right: -7px;
+        float: right;
+        @media screen and (max-width: $break-small) {
+          float: none;
+          margin-top: 20px;
+          margin-right: 0;
+        }
+      }
+      textarea {
+        height: 200px;
+        width: 100%;
+        margin-top: 50px;
+        border: 2px solid $grey;
+        opacity: 0.7;
+        &:focus {
+          border: 2px solid $mint;
+          outline: 0;
+          opacity: 0.7;
+        }
+      }
+      input[type=submit] {
+        float: right;
+        border: none;
+        background: #fff;
+        padding: 5px 50px;
+        margin-top: 30px;
+        margin-right: -10px;
+        border: 2px solid $grey;
+        border-radius: 2px;
+        opacity: 0.7;
+        @media screen and (max-width: $break-small) {
+          float: none;
+          margin: 0 auto;
+        }
+        &:hover {
+          border: 2px solid $mint;
+          outline: 0;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+// _____________ detailpage _____________
+.proheader {
+  h1 {
+    text-align: center;
+    margin: 100px 0 0 0;
+  }
+}
+.project {
+  margin-top: -400px;
+  .proabout {
+    float: right;
+    width: 20%;
+    margin:0 30px 0 0;
+    h2, h3, h4 {
+      font-size: 30px;
+    }
+    @media screen and (max-width: $break-medium) {
+      .detailabout {
+        float: left;
+        margin: 0 auto;
+      }
+      .detailsoftware {
+        margin: 0 0 0 15%;
+        float: left;
+      }
+      .detailclient {
+        float: right;
+      }
+    }
+    @media screen and (max-width: $break-small) {
+      .detailabout {
+        float: none;
+        margin: 0 auto;
+        width: 90%;
+      }
+      .detailsoftware {
+        margin: 0 0 0 20px;
+        float: left;
+      }
+      .detailclient {
+        float: right;
+        margin: 0 20px 0 0;
+      }
+    }
+
+    p {
+      font-size: 15px;
+    }
+    @media screen and (max-width: $break-medium) {
+      float: none;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  .proimages {
+    background: white;
+    float: left;
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @media screen and (max-width: $break-small) {
+      height: 100%;
+    }
+    .proimg {
+      width: 50%;
+      height: 98%;
+      background-image: url(../images/pp3.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      @media screen and (max-width: $break-small) {
+        width: 100%;
+        height: 400px;
+      }
+      &:nth-child(2) {
+        background-image: url(../images/pp2.png);
+        width: 48%;
+        height: 47%;
+        @media screen and (max-width: $break-small) {
+          width: 100%;
+          height: 400px;
+        }
+      }
+      &:nth-child(3) {
+        width: 48%;
+        height: 48.5%;
+        background-image: url(../images/pp1.png);
+        @media screen and (max-width: $break-small) {
+          width: 100%;
+          height: 400px;
+        }
+      }
+    }
+    @media screen and (max-width: $break-medium) {
+      width: 100%;
+    }
+    .vendetta {
+      background-image: url(../images/vendetta3.png);
+      &:nth-child(2) { background-image: url(../images/vendetta1.png) }
+      &:nth-child(3) { background-image: url(../images/vendetta2.png) }
+    }
+    .blomsma {
+      height: 100%;
+      width: 100%;
+      background-image: url(../images/blomsmaview.png);
+    }
+    .menucard {
+      background-image: url(../images/Menucard.png);
+      &:nth-child(2) { background-image: url(../images/Menucard2.jpg) }
+      &:nth-child(3) { background-image: url(../images/Menucard3.png) }
+    }
+    .floatingisland {
+      background-image: url(../images/floatingisland.png);
+      &:nth-child(2) { background-image: url(../images/floatingisland2.png) }
+      &:nth-child(3) { background-image: url(../images/floatingisland3.png) }
+    }
+  }
+}
+
+// _____________ toggle _____________
+.f-screen {
+  width: 100%;
+  @include transition-all;
+}
+.menu-hidden {
+  left: -240px;
+  @include transition-all;
+  @media screen and (max-width: $break-medium) {
+    left: 0px;
+  }
+}
+.labelfs {
+  margin-left: -240px;
+  @include transition-all;
+  @media screen and (max-width: $break-medium) {
+    margin-left: 240px;
+  }
+}
+
+// _____________ fonts _____________
+strong {
+  font-size: 100px;
+  letter-spacing: 0;
+  color: $black;
+  @media screen and (max-width: $break-small) {
+    font-size:40px;
+  }
+}

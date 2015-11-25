@@ -1,0 +1,19 @@
+// _____________ Colours _____________
+$black:      #2E2D2C;
+$grey:       #9D9D9C;
+$lightgrey:  #FAFAFA;
+$white:      #FFFFFF;
+$mint:       #2CECB3;
+
+// _____________ mixins _____________
+@mixin transition-all {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition:all 0.3s;
+}
+
+// _____________ breakpoints _____________
+$break-small: 695px;
+$break-medium: 992px;
+$break-large: 1200px;

@@ -1,0 +1,497 @@
+@font-face {
+  font-family: 'code-bold';
+  src: url("../font/codebold.eot");
+  src: url("../font/codebold.eot?#iefix") format("embedded-opentype"), url("../font/codebold.woff2") format("woff2"), url("../font/codebold.woff") format("woff"), url("../font/codebold.ttf") format("truetype"), url("../font/codebold.svg#code-bold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #FAFAFA;
+  border-right: 2px solid #2CECB3;
+  width: 240px;
+  height: 100%;
+  z-index: 5;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  @media screen and (max-width: 992px) {
+    .menu {
+      left: -240px; } }
+  .menu label.menu-toggle {
+    position: fixed;
+    left: 240px;
+    width: 60px;
+    height: 60px;
+    line-height: 0px;
+    display: block;
+    padding: 0;
+    text-indent: -9999px;
+    z-index: 6;
+    background: #FAFAFA url(https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png) 50% 50%/25px 25px no-repeat;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
+    @media screen and (max-width: 992px) {
+      .menu label.menu-toggle {
+        left: 0px; } }
+  .menu ul, .menu p {
+    list-style-type: none;
+    margin-top: 100px; }
+    .menu ul a, .menu ul label, .menu p a, .menu p label {
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 2px;
+      display: block;
+      margin: 0 0 0 10px;
+      padding: 0 20px;
+      line-height: 30px;
+      text-decoration: none;
+      color: #2E2D2C;
+      opacity: 0.7;
+      transition: 0.1s ease-out; }
+      .menu ul a:hover, .menu ul label:hover, .menu p a:hover, .menu p label:hover {
+        color: #2CECB3;
+        opacity: 1; }
+
+header {
+  width: calc(100% - 240px);
+  height: 100vh;
+  float: right;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  @media screen and (max-width: 992px) {
+    header {
+      width: 100%; } }
+  @media screen and (max-width: 695px) {
+    header {
+      min-height: 400px;
+      background: #fff; } }
+  header .title-mobile {
+    display: none; }
+    @media screen and (max-width: 992px) {
+      header .title-mobile {
+        display: block;
+        width: 300px;
+        margin: 0 auto; }
+        header .title-mobile h1 {
+          margin-top: 150px;
+          text-align: center; } }
+  header .title {
+    position: relative;
+    width: 520px;
+    height: 225px;
+    left: 50%;
+    margin: 200px 0 0 -315px; }
+    @media screen and (max-width: 992px) {
+      header .title {
+        display: none; } }
+    header .title .dennis, header .title .timmers {
+      color: #2E2D2C;
+      position: absolute;
+      float: left;
+      margin: 0 0 0 69px;
+      font-family: "code-bold", sans-serif; }
+      header .title .dennis .firstname, header .title .dennis .lastname, header .title .timmers .firstname, header .title .timmers .lastname {
+        float: left;
+        font-size: 120px;
+        letter-spacing: 3px;
+        text-align: right; }
+      header .title .dennis .titleborder, header .title .timmers .titleborder {
+        margin: -110px 0 0 -35px;
+        float: left;
+        background: #2CECB3;
+        width: 2px;
+        height: 230px;
+        border-left: 15px solid #fff;
+        border-right: 15px solid #fff; }
+      header .title .dennis .skills, header .title .timmers .skills {
+        position: absolute;
+        margin: 25px 0 0 415px;
+        float: right;
+        font-size: 20px; }
+        header .title .dennis .skills:nth-child(3), header .title .timmers .skills:nth-child(3) {
+          margin: 24px 0 0 485px; }
+        header .title .dennis .skills p, header .title .timmers .skills p {
+          margin: -3px 0; }
+      header .title .dennis .firstname, header .title .timmers .firstname {
+        margin: 0 0 0 15px; }
+    header .title .timmers {
+      margin: 120px 0 0 0; }
+
+main {
+  width: calc(100% - 240px);
+  float: right;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  main .print {
+    margin-top: 200px; }
+  @media screen and (max-width: 992px) {
+    main {
+      width: 100%;
+      margin-top: -250px; } }
+  main .interactive h1, main .print h1 {
+    text-transform: capitalize;
+    color: #9D9D9C;
+    letter-spacing: 3px;
+    text-align: right;
+    font-weight: 400;
+    font-size: 50px;
+    margin: -100px 88px 100px 0;
+    border-right: 2px solid #2CECB3; }
+    @media screen and (max-width: 992px) {
+      main .interactive h1, main .print h1 {
+        margin: 0 50px 0 0; } }
+    @media screen and (max-width: 992px) {
+      main .interactive h1, main .print h1 {
+        font-size: 30px; } }
+  main .interactive .preview, main .print .preview {
+    margin: 0 auto 100px auto;
+    height: 400px;
+    width: 85%;
+    max-width: 1200px;
+    padding: 10px;
+    background: #FAFAFA;
+    box-sizing: border-box;
+    border-radius: 2px;
+    cursor: pointer; }
+    @media screen and (max-width: 992px) {
+      main .interactive .preview, main .print .preview {
+        width: 99%;
+        margin-top: 50px; } }
+    @media screen and (max-width: 695px) {
+      main .interactive .preview, main .print .preview {
+        width: 99%;
+        height: auto;
+        margin: 0 auto 50px auto; } }
+    main .interactive .preview .view, main .print .preview .view {
+      border-radius: 2px;
+      background: #FFFFFF;
+      background-size: cover;
+      background-position: center;
+      width: calc(50% - 10px);
+      border-right: 2px solid #2CECB3;
+      height: 100%;
+      float: left; }
+      @media screen and (max-width: 695px) {
+        main .interactive .preview .view, main .print .preview .view {
+          width: 100%;
+          float: none; } }
+      @media screen and (max-width: 695px) {
+        main .interactive .preview .view, main .print .preview .view {
+          height: 300px; } }
+    main .interactive .preview .imgview1, main .print .preview .imgview1 {
+      background-image: url(../images/perfectplaceview.png); }
+    main .interactive .preview .imgview2, main .print .preview .imgview2 {
+      background-image: url(../images/GLRlogo.png);
+      background-repeat: no-repeat;
+      background-size: contain; }
+    main .interactive .preview .imgview3, main .print .preview .imgview3 {
+      background-image: url(../images/vendettaview.png); }
+    main .interactive .preview .imgview4, main .print .preview .imgview4 {
+      background-image: url(../images/blomsmaview.png);
+      background-repeat: no-repeat;
+      background-size: contain; }
+    main .interactive .preview .imgview5, main .print .preview .imgview5 {
+      background-image: url(../images/vriendenview.png); }
+    main .interactive .preview .imgview6, main .print .preview .imgview6 {
+      background-image: url(../images/floatingislandview.png); }
+    main .interactive .preview .info, main .print .preview .info {
+      width: calc(50% - 10px);
+      float: right;
+      margin-right: 10px; }
+      @media screen and (max-width: 695px) {
+        main .interactive .preview .info, main .print .preview .info {
+          width: 100%;
+          float: none; } }
+      main .interactive .preview .info h2, main .print .preview .info h2 {
+        text-transform: capitalize;
+        color: #2E2D2C;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-align: center; }
+      main .interactive .preview .info p, main .print .preview .info p {
+        padding: 10px;
+        font-size: 15px;
+        color: #2E2D2C;
+        text-align: left; }
+  main .about {
+    height: 500px;
+    margin-top: 95px;
+    background: #FFFFFF; }
+    @media screen and (max-width: 695px) {
+      main .about {
+        margin-top: 0;
+        height: 100%; } }
+    main .about h1 {
+      font-weight: 700;
+      font-size: 100px;
+      text-align: right;
+      margin: 100px 88px 50px 0;
+      color: #2E2D2C; }
+      @media screen and (max-width: 695px) {
+        main .about h1 {
+          font-size: 40px; } }
+      @media screen and (max-width: 695px) {
+        main .about h1 {
+          text-align: center;
+          float: none;
+          height: 100%;
+          margin: 50px 0 0 0; } }
+    main .about p {
+      color: #2E2D2C;
+      margin: 50px auto;
+      padding: 5px 50px 50px 50px;
+      max-width: 960px; }
+
+.mainfooter {
+  width: calc(100% - 240px);
+  background: #FAFAFA;
+  float: right;
+  margin-top: 100px;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  @media screen and (max-width: 992px) {
+    .mainfooter {
+      width: 100%;
+      max-width: 960px; } }
+  @media screen and (max-width: 695px) {
+    .mainfooter {
+      text-align: center;
+      float: none;
+      height: 100%; } }
+  .mainfooter h1 {
+    color: #2E2D2C;
+    font-weight: 700;
+    font-size: 100px;
+    margin: 50px 88px 50px 0;
+    text-align: right; }
+    @media screen and (max-width: 695px) {
+      .mainfooter h1 {
+        font-size: 40px;
+        text-align: center;
+        margin: 20px 0 50px 0; } }
+  .mainfooter form {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center; }
+    @media screen and (max-width: 695px) {
+      .mainfooter form {
+        width: 90%; } }
+    .mainfooter form fieldset {
+      border: none; }
+      .mainfooter form fieldset legend {
+        color: #2E2D2C;
+        font-size: 30px;
+        font-weight: 300;
+        letter-spacing: 2px;
+        text-align: center; }
+      .mainfooter form fieldset input[type=text], .mainfooter form fieldset input[type=email] {
+        margin-top: 30px;
+        float: left;
+        border-radius: 2px;
+        border: none;
+        border-bottom: 2px solid #9D9D9C;
+        background: none;
+        transition: 0.3s ease-out;
+        opacity: 0.7; }
+        .mainfooter form fieldset input[type=text]:focus, .mainfooter form fieldset input[type=email]:focus {
+          border-bottom: 2px solid #2CECB3;
+          outline: 0;
+          opacity: 0.7; }
+        @media screen and (max-width: 695px) {
+          .mainfooter form fieldset input[type=text], .mainfooter form fieldset input[type=email] {
+            float: none;
+            width: 80%;
+            margin: 0 auto; } }
+      .mainfooter form fieldset input[type=email] {
+        margin-right: -7px;
+        float: right; }
+        @media screen and (max-width: 695px) {
+          .mainfooter form fieldset input[type=email] {
+            float: none;
+            margin-top: 20px;
+            margin-right: 0; } }
+      .mainfooter form fieldset textarea {
+        height: 200px;
+        width: 100%;
+        margin-top: 50px;
+        border: 2px solid #9D9D9C;
+        opacity: 0.7; }
+        .mainfooter form fieldset textarea:focus {
+          border: 2px solid #2CECB3;
+          outline: 0;
+          opacity: 0.7; }
+      .mainfooter form fieldset input[type=submit] {
+        float: right;
+        border: none;
+        background: #fff;
+        padding: 5px 50px;
+        margin-top: 30px;
+        margin-right: -10px;
+        border: 2px solid #9D9D9C;
+        border-radius: 2px;
+        opacity: 0.7; }
+        @media screen and (max-width: 695px) {
+          .mainfooter form fieldset input[type=submit] {
+            float: none;
+            margin: 0 auto; } }
+        .mainfooter form fieldset input[type=submit]:hover {
+          border: 2px solid #2CECB3;
+          outline: 0;
+          opacity: 0.7; }
+
+.proheader h1 {
+  text-align: center;
+  margin: 100px 0 0 0; }
+
+.project {
+  margin-top: -400px; }
+  .project .proabout {
+    float: right;
+    width: 20%;
+    margin: 0 30px 0 0; }
+    .project .proabout h2, .project .proabout h3, .project .proabout h4 {
+      font-size: 30px; }
+    @media screen and (max-width: 992px) {
+      .project .proabout .detailabout {
+        float: left;
+        margin: 0 auto; }
+      .project .proabout .detailsoftware {
+        margin: 0 0 0 15%;
+        float: left; }
+      .project .proabout .detailclient {
+        float: right; } }
+    @media screen and (max-width: 695px) {
+      .project .proabout .detailabout {
+        float: none;
+        margin: 0 auto;
+        width: 90%; }
+      .project .proabout .detailsoftware {
+        margin: 0 0 0 20px;
+        float: left; }
+      .project .proabout .detailclient {
+        float: right;
+        margin: 0 20px 0 0; } }
+    .project .proabout p {
+      font-size: 15px; }
+    @media screen and (max-width: 992px) {
+      .project .proabout {
+        float: none;
+        margin: 0 auto;
+        width: 100%; } }
+  .project .proimages {
+    background: white;
+    float: left;
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    @media screen and (max-width: 695px) {
+      .project .proimages {
+        height: 100%; } }
+    .project .proimages .proimg {
+      width: 50%;
+      height: 98%;
+      background-image: url(../images/pp3.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center; }
+      @media screen and (max-width: 695px) {
+        .project .proimages .proimg {
+          width: 100%;
+          height: 400px; } }
+      .project .proimages .proimg:nth-child(2) {
+        background-image: url(../images/pp2.png);
+        width: 48%;
+        height: 47%; }
+        @media screen and (max-width: 695px) {
+          .project .proimages .proimg:nth-child(2) {
+            width: 100%;
+            height: 400px; } }
+      .project .proimages .proimg:nth-child(3) {
+        width: 48%;
+        height: 48.5%;
+        background-image: url(../images/pp1.png); }
+        @media screen and (max-width: 695px) {
+          .project .proimages .proimg:nth-child(3) {
+            width: 100%;
+            height: 400px; } }
+    @media screen and (max-width: 992px) {
+      .project .proimages {
+        width: 100%; } }
+    .project .proimages .vendetta {
+      background-image: url(../images/vendetta3.png); }
+      .project .proimages .vendetta:nth-child(2) {
+        background-image: url(../images/vendetta1.png); }
+      .project .proimages .vendetta:nth-child(3) {
+        background-image: url(../images/vendetta2.png); }
+    .project .proimages .blomsma {
+      height: 100%;
+      width: 100%;
+      background-image: url(../images/blomsmaview.png); }
+    .project .proimages .menucard {
+      background-image: url(../images/Menucard.png); }
+      .project .proimages .menucard:nth-child(2) {
+        background-image: url(../images/Menucard2.jpg); }
+      .project .proimages .menucard:nth-child(3) {
+        background-image: url(../images/Menucard3.png); }
+    .project .proimages .floatingisland {
+      background-image: url(../images/floatingisland.png); }
+      .project .proimages .floatingisland:nth-child(2) {
+        background-image: url(../images/floatingisland2.png); }
+      .project .proimages .floatingisland:nth-child(3) {
+        background-image: url(../images/floatingisland3.png); }
+
+.f-screen {
+  width: 100%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+
+.menu-hidden {
+  left: -240px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  @media screen and (max-width: 992px) {
+    .menu-hidden {
+      left: 0px; } }
+
+.labelfs {
+  margin-left: -240px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  @media screen and (max-width: 992px) {
+    .labelfs {
+      margin-left: 240px; } }
+
+strong {
+  font-size: 100px;
+  letter-spacing: 0;
+  color: #2E2D2C; }
+  @media screen and (max-width: 695px) {
+    strong {
+      font-size: 40px; } }
+
+/*# sourceMappingURL=main.css.map */
